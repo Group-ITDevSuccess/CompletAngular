@@ -41,5 +41,10 @@ export class HotelListComponent {
     imageUrl: 'assets/img/hotel5.jpg'
   }];
 
+  public showBadge: boolean;
+
+  public togglesNewBadge(): void{
+    this.showBadge = ! this.showBadge;
+  }
 
 }
