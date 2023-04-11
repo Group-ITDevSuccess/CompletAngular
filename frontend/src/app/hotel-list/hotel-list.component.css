@@ -1,0 +1,6 @@
+.custom-card-img {
+  max-height: 200px; /* Définir la hauteur maximale souhaitée */
+  min-height: 200px; /* Définir la hauteur maximale souhaitée */
+  width: 100%; /* Définir la largeur fixe souhaitée */
+  object-fit: cover; /* Ajuster l'image pour remplir complètement le conteneur */
+}
