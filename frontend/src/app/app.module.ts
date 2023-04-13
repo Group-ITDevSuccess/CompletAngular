@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { ReplaceComma } from './shared/pipes/replace-comma.pipe';
+import { StartRatingComponent } from './shared/components/star-rating/star-rating.component';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -15,7 +16,8 @@ registerLocaleData(localeFr, 'fr');
   declarations: [
     AppComponent,
     HotelListComponent,
-    ReplaceComma
+    ReplaceComma,
+    StartRatingComponent
   ],
   imports: [
     BrowserModule,
