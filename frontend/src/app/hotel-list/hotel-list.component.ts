@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { IHotel } from "./hotel";
 
 @Component({
   selector: 'app-hotel-list',
@@ -6,10 +7,10 @@ import { Component } from "@angular/core";
   styleUrls: ['./hotel-list.component.css']
 })
 
-export class HotelListComponent {
+export class HotelListComponent implements OnInit {
   public title = 'List Hotels';
 
-  public hotels: any[] = [{
+  public hotels: IHotel[] = [{
     hotelId: 1,
     hotelName: 'Hôtel le Bristol Paris',
     description: 'Un luxueux hôtel 5 étoiles situé au cœur de Paris, offrant un hébergement élégant et des services de première classe.',
@@ -44,8 +45,11 @@ export class HotelListComponent {
   public showBadge: boolean;
   public hotelFilter = "mot";
 
+  ngOnInit(): void {
+
+  }
+
   public togglesNewBadge(): void{
     this.showBadge = ! this.showBadge;
   }
-
 }
