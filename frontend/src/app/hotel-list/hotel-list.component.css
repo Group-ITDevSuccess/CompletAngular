@@ -4,3 +4,7 @@
   width: 100%; /* Définir la largeur fixe souhaitée */
   object-fit: cover; /* Ajuster l'image pour remplir complètement le conteneur */
 }
+
+.filter{
+  font-size: 25px;
+}
