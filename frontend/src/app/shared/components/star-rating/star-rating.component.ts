@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from "@angular/core";
+import { Component, EventEmitter, Input, OnChanges, Output } from "@angular/core";
 
 
 @Component({
@@ -14,8 +14,15 @@ export class StartRatingComponent implements OnChanges{
   @Input()
   public rating: number;
 
+  @Output()
+  public starRatingClicked : EventEmitter<string> = new EventEmitter<string>();
+
   ngOnChanges() {
     this.starWidth = this.rating * 125 / 5;
+  }
+
+  public sendRating(): void{
+    this.starRatingClicked.emit(`La note est de ${this.rating}`);
   }
 
 }
