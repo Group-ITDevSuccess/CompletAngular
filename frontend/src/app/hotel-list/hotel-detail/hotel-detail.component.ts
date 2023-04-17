@@ -2,7 +2,6 @@ import { IHotel } from './../hotel';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HotelListService } from '../hotel-list.service';
-import { IHotel } from '../hotel';
 
 @Component({
   selector: 'app-hotel-detail',
