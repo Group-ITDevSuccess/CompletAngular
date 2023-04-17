@@ -4,15 +4,19 @@
       <img class="card-img" [title]="hotel.hotelName | uppercase" [src]="hotel.imageUrl" [alt]="hotel.hotelName">
     </div>
     <div class="col-md-6">
-      <h2>{{hotel.hotelName | uppercase}} </h2>
-      <p> {{hotel.description}}</p>
-      <p>Price:  {{hotel.price}} $</p>
-      <div class="d-flex align-items-center">
+      <h2 class="text-primary">{{hotel.hotelName | uppercase}}</h2>
+      <p class="lead">{{hotel.description}}</p>
+      <p class="fw-bold">Price: {{hotel.price | currency : 'EUR' : 'symbol' : '1.2-2' : 'fr' | replaceComma}}</p>
+      <div class="d-flex align-items-center mt-3">
         <app-star-rating [rating]="hotel.rating"></app-star-rating>
       </div>
-      <div class="mt-3">
-        <button class="btn btn-primary m-lg-4">Edit</button>
-        <button class="btn btn-secondary">Back</button>
+      <div class="mt-4">
+        <button class="btn btn-primary me-3">
+          <span class="material-icons">edit</span> Edit
+        </button>
+        <button class="btn btn-secondary" (click)="backToList()">
+          <span class="material-icons">arrow_back</span> Back
+        </button>
       </div>
     </div>
   </div>
