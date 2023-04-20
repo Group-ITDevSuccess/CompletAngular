@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
-import { HotelDetailGuard } from './shared/guard/hotel-detail.guard';
 import { SharedModule } from '../shared/shared.module';
+import { HotelRoutingModule } from './hotel-routing.module';
 
 
 
@@ -14,11 +13,8 @@ import { SharedModule } from '../shared/shared.module';
     HotelDetailComponent
   ],
   imports: [
-    RouterModule.forChild([
-      {path: 'hotels/:id', component: HotelDetailComponent, canActivate: [HotelDetailGuard]},
-      {path: 'hotels', component: HotelListComponent},
-    ]),
-    SharedModule
+    SharedModule,
+    HotelRoutingModule
   ]
 })
 export class HotelModule { }
