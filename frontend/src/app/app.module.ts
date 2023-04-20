@@ -8,12 +8,12 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { ReplaceComma } from './shared/pipes/replace-comma.pipe';
 import { StartRatingComponent } from './shared/components/star-rating/star-rating.component';
 import { HomeComponent } from './home/home.component';
-import { HotelDetailComponent } from './hotel-list/hotel-detail/hotel-detail.component';
-import { HotelDetailGuard } from './hotel-list/hotel-detail.guard';
+import { HotelDetailGuard } from './hotels/shared/guard/hotel-detail.guard';
+import { HotelListComponent } from './hotels/hotel-list/hotel-list.component';
+import { HotelDetailComponent } from './hotels/hotel-detail/hotel-detail.component';
 
 registerLocaleData(localeFr, 'fr');
 
